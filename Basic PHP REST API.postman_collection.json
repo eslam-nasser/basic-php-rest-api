@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "b1fe970b-6bcf-4840-aff7-f0b067c9ca88",
+		"name": "Basic PHP REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/php-rest-api/api/post/read.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"php-rest-api",
+						"api",
+						"post",
+						"read.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/php-rest-api/api/post/read_single.php?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"php-rest-api",
+						"api",
+						"post",
+						"read_single.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"lorem 1\",\n\t\"body\": \"<h1>title</h1>\",\n\t\"author\": \"Ramy\",\n\t\"category_id\": \"1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/php-rest-api/api/post/create.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"php-rest-api",
+						"api",
+						"post",
+						"create.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"4\",\n\t\"title\": \"updated titlte\",\n\t\"body\": \"<h1>title</h1>\",\n\t\"author\": \"Ramy\",\n\t\"category_id\": \"1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/php-rest-api/api/post/update.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"php-rest-api",
+						"api",
+						"post",
+						"update.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"7\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/php-rest-api/api/post/delete.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"php-rest-api",
+						"api",
+						"post",
+						"delete.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
